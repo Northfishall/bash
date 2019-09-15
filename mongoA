@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+declare -a ListA=("夺命尖齿" "宝蓝幽谷君王" "耳语之系斗篷" "寒冰菁华" "混沌裁决" "幽魂之缚" "2019年珍宝之瓶")
+declare -a ListB=(dmjc blygjw eyzxdp hbjh hdcj yhzf zbzp)
+#ListA=(test bad gay so what)
+indexa=0
+for i in ${ListA[@]};
+do 
+    echo $indexa
+    echo "mongoexport -h 127.0.0.1 -d c5 -c " $i " -o /root/"${ListB[$indexa]}".dat"
+    indexa=`expr $indexa + 1`
+
+    
+done
+
