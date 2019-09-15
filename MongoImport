@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+listA=(dmjc blygjw eyzxdp hbjh hdcj yhzf zbzp)
+
+for i in ${listA[@]};
+do 
+    eval "mongoimport -h 127.0.0.1 -d c5 -c "$i "--upsert ../data/"$i".dat"
+
+done
