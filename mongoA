@@ -7,7 +7,7 @@ indexa=0
 for i in ${ListA[@]};
 do 
     echo $indexa
-    echo "mongoexport -h 127.0.0.1 -d c5 -c " $i " -o /root/"${ListB[$indexa]}".dat"
+    eval "mongoexport -h 127.0.0.1 -d c5 -c " $i " -o /root/"${ListB[$indexa]}".dat"
     indexa=`expr $indexa + 1`
 
     
