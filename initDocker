@@ -1,0 +1,4 @@
+#!/bin/bash
+eval "docker rm Tensor1"
+eval "docker run -it --name Tensor1  -v /home/kyung/Documents/python_code/tensorflow:/root  tensorflow/tensorflow:latest-py3"
+eval "export TF_CPP_MIN_LOG_LEVEL=2"
