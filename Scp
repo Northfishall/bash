@@ -1,0 +1,6 @@
+#!/bin/bash
+#echo "scp -r "$2" fuky@10.249.147.242:"$3
+#echo $1 | eval "scp -r "$2" fuky@10.249.147.242:"$3
+
+eval "scp -r "$1" fuky@10.249.147.242:"$2
+
